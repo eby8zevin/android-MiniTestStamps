@@ -6,8 +6,11 @@ import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-
 import static org.hamcrest.CoreMatchers.anything;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import android.util.Log;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.IdlingRegistry;
@@ -57,6 +60,36 @@ public class MainActivityTest {
         delayTwoSecond();
         onView(withId(R.id.rvWeather)).check(matches(isDisplayed()));
         onView(withId(R.id.rvWeather)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+    }
+
+    public boolean isPalindrome(String value) {
+        String temp = "";
+
+        for (int i = value.length() - 1; i >= 0; i--) {
+            temp = temp + value.charAt(i);
+        }
+
+        System.out.println(temp);
+        Log.d("", "" + temp);
+        return temp.equals(value);
+    }
+
+    @Test
+    void test() {
+        isPalindrome("kodok");
+    }
+
+    @Test
+    void testPalindrome() {
+        assertTrue(isPalindrome("a"));
+        assertTrue(isPalindrome("aba"));
+        assertTrue(isPalindrome("kodok"));
+        assertTrue(isPalindrome(""));
+
+        assertFalse(isPalindrome("ab"));
+        assertFalse(isPalindrome("abab"));
+        assertFalse(isPalindrome("kodcok"));
+        assertFalse(isPalindrome("eby"));
     }
 
     private void delayTwoSecond() {
