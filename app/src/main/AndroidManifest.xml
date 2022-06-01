@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_stamps_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Stamps">
+        <activity android:name=".ui.PalindromeActivity" />
         <activity android:name=".ui.WeatherActivity" />
         <activity android:name=".ui.ApaBoleActivity" />
         <activity
