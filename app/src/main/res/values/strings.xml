@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Stamps</string>
+    <string name="apa_bole">ApaBole</string>
+    <string name="jakarta_city_weather">Jakarta City Weather</string>
+    <string name="result">Result:</string>
+
+    <string name="one">1.&#160;</string>
+    <string name="two">2.&#160;</string>
+    <string name="three">3.&#160;</string>
+
+    <string name="apaBole_0">Tolong print angka dari 1 sampai 100. Tetapi, Ada peraturan khusus:</string>
+    <string name="apaBole_1">Untuk setiap angka yang bisa dibagi dengan 3, jangan print angka nya, tapi print "Apa".</string>
+    <string name="apaBole_2">Kalau bisa dibagi dengan 5, print "Bole",</string>
+    <string name="apaBole_3">Kalau bisa dibagi oleh 3 dan 5, print "ApaBole".</string>
+
+    <string name="api_1">Silahkan gunakan API yang disediakan http://openweathermap.org</string>
+    <string name="api_2">Tolong tampilkan output berupa ramalan \ncuaca kota Jakarta untuk 7 hari ke depan</string>
+    <string name="api_3">Soal ini tidak membutuhkan akun berbayar.</string>
+</resources>
