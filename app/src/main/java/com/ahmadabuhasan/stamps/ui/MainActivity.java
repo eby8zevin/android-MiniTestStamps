@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.btnApaBole.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ApaBoleActivity.class)));
         binding.btnWeather.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, WeatherActivity.class)));
+        binding.btnPalindrome.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, PalindromeActivity.class)));
     }
 
     @Override
