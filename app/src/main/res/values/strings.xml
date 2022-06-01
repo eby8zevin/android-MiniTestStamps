@@ -16,4 +16,9 @@
     <string name="api_1">Silahkan gunakan API yang disediakan http://openweathermap.org</string>
     <string name="api_2">Tolong tampilkan output berupa ramalan \ncuaca kota Jakarta untuk 7 hari ke depan</string>
     <string name="api_3">Soal ini tidak membutuhkan akun berbayar.</string>
+
+    <string name="palindrome">Palindrome</string>
+    <string name="not_palindrome">NOT Palindrome</string>
+    <string name="type_your_word_here">type your word here. . .</string>
+    <string name="check_palindrome">check palindrome</string>
 </resources>
