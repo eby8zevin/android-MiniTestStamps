@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 
+import com.ahmadabuhasan.stamps.R;
 import com.ahmadabuhasan.stamps.databinding.ActivityApaBoleBinding;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class ApaBoleActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("AppBole");
+        getSupportActionBar().setTitle(R.string.apa_bole);
 
         ArrayList<String> list = new ArrayList<>();
 
