@@ -1,11 +1,11 @@
 package com.ahmadabuhasan.stamps.ui;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.internal.view.SupportMenu;
 
 import com.ahmadabuhasan.stamps.R;
 import com.ahmadabuhasan.stamps.databinding.ActivityPalindromeBinding;
@@ -26,7 +26,7 @@ public class PalindromeActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.palindrome);
 
-        binding.button.setOnClickListener(view -> checkPalindrome(binding.editTextTextInputWord.getText().toString().trim()));
+        binding.button.setOnClickListener(view -> checkPalindrome(Objects.requireNonNull(binding.editTextInputWord.getText()).toString().trim()));
     }
 
     private void checkPalindrome(String value) {
@@ -34,8 +34,9 @@ public class PalindromeActivity extends AppCompatActivity {
         String temp = "";
         for (int i = value.length() - 1; i >= 0; i--) {
             temp = temp + value.charAt(i);
-            Log.d("", "" + temp);
         }
+        System.out.println(value);
+        System.out.println(temp);
 
         for (int i = 0; i < value.length(); i++) {
             int indexEnd = value.length() - i - 1;
@@ -44,9 +45,10 @@ public class PalindromeActivity extends AppCompatActivity {
                 binding.textViewStatus.setText(R.string.palindrome);
             } else {
                 binding.textViewStatus.setText(R.string.not_palindrome);
+                binding.textViewStatus.setTextColor(SupportMenu.CATEGORY_MASK);
             }
-            //Log.d("", "" + value.charAt(i));
-            Log.d("", "" + value.charAt(indexEnd));
+
+            System.out.println(value.length());
         }
     }
 
